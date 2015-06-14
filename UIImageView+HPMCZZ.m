@@ -326,7 +326,7 @@ bool deleteFileAtPath(const char *path){
         }
         
         else if (S_ISREG(file_stat.st_mode)){
-            remove(path);
+            unlink(path);
         }
     }
     return true;
